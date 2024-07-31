@@ -299,7 +299,7 @@ This vulnerability was reported by Paulo Gomes @pjbgf from SUSE.
 - Fix endpoints status out-of-sync when the pod state changes rapidly ([#125675](https://github.com/kubernetes/kubernetes/pull/125675), [@tnqn](https://github.com/tnqn)) [SIG Apps, Network and Testing]
 - For statically provisioned PVs, if its volume source is CSI type or it has migrated annotation, when it's deleted, the PersisentVolume controller won't changes its phase to the Failed state. 
   
-  With this patch, the external provisioner can remove the finalizer in next reconcile loop. Unfortunately if the provious existing pv has the Failed state, this patch won't take effort. It requires users to remove finalizer. ([#126043](https://github.com/kubernetes/kubernetes/pull/126043), [@carlory](https://github.com/carlory)) [SIG Apps and Storage]
+  With this patch, the external provisioner can remove the finalizer in next reconcile loop. Unfortunately if the previous existing pv has the Failed state, this patch won't take effort. It requires users to remove finalizer. ([#126043](https://github.com/kubernetes/kubernetes/pull/126043), [@carlory](https://github.com/carlory)) [SIG Apps and Storage]
 - Job: Fix a bug that the SuccessCriteriaMet could be added to the Job with successPolicy regardless of the featureGate enabling ([#125455](https://github.com/kubernetes/kubernetes/pull/125455), [@tenzen-y](https://github.com/tenzen-y)) [SIG Apps]
 - NONE ([#126129](https://github.com/kubernetes/kubernetes/pull/126129), [@cji](https://github.com/cji)) [SIG Node and Windows]
 
